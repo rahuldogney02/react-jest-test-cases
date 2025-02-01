@@ -1,6 +1,17 @@
+import { useState } from "react";
 
 
-const MyJestApp = ()=>{
+const MyJestApp = () =>{
+    const [data , setName] = useState("");
+
+    function printData(e){
+        e.preventDefault();
+        const valueData = e.target.value+"Test";
+        setName(valueData);
+        console.log(data);
+
+    }
+
     return(
         <>
         <div style={{border: '2px dashed black' , padding:'10px', background:'black' , color:'red',display:'flex'} }>
@@ -11,7 +22,7 @@ const MyJestApp = ()=>{
         <div style={{border: '2px dashed black' , padding:'40px', background:'gray' , color:'blue',display:'flex'} }>
             <div>
                 <label>First Name</label>
-                <input type='text' placeholder="Enter first name" name="firstname" />
+                <input type='text' name="firstname" placeholder="Enter first name" value={data} onChange={printData}  />
             </div>
         </div>
         </>

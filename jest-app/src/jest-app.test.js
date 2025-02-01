@@ -1,4 +1,4 @@
-import {render , screen} from '@testing-library/react';
+import {fireEvent, render , screen} from '@testing-library/react';
 import MyJestApp from './jest-app';
 
 const titleValue= 'freepik images';
@@ -25,7 +25,7 @@ test('Testing of Input box',()=>{
 
 })
 
-describe.only("UI test cases in Group",()=>{
+describe("UI test cases in Group",()=>{
     test('test one MyJestApp', ()=>{
         render(<MyJestApp />);
         const  text = screen.getByText('Hello Jest test case');
@@ -36,16 +36,16 @@ describe.only("UI test cases in Group",()=>{
         expect(title).toBeInTheDocument();
     
     })
-    test('Testing of two Input box',()=>{
-        render(<MyJestApp/>);
-        let checkInput = screen.getByRole('textbox');
-        let checkPlaceHolder = screen.getByPlaceholderText('Enter first name')
-        expect(checkInput).toBeInTheDocument();
-        expect(checkPlaceHolder).toBeInTheDocument();
-        expect(checkInput).toHaveAttribute("name","firstname")
-        expect(checkInput).toHaveAttribute("type","text")
+    // test.only('Testing of two Input box',()=>{
+    //     render(<MyJestApp/>);
+    //     let checkInput = screen.getByRole('textbox');
+    //     let checkPlaceHolder = screen.getByPlaceholderText('Enter first name')
+    //     expect(checkInput).toBeInTheDocument();
+    //     expect(checkPlaceHolder).toBeInTheDocument();
+    //     expect(checkInput).toHaveAttribute("name","firstname")
+    //     expect(checkInput).toHaveAttribute("type","text")
     
-    })
+    // })
     test.skip('Skip Input box',()=>{
         render(<MyJestApp/>);
         let checkInput = screen.getByRole('textbox');
@@ -56,4 +56,12 @@ describe.only("UI test cases in Group",()=>{
         expect(checkInput).toHaveAttribute("type","text")
     
     })
+})
+
+test('input field fireEvent',()=>{
+    render(<MyJestApp/>);
+
+    let inputName = screen.getByRole('textbox');
+    fireEvent.change(inputName,{target:{value:'113'}});
+    expect(inputName.value).toBe("113Test")
 })

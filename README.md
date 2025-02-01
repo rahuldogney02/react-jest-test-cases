@@ -46,3 +46,4 @@ Pattern Mode Usage
  Describe : When we have lot's of test cases i.e shorting, api call, event etc. Identification is simple by using describe() , some time i want to test/skip  api related test cases by using grouping with the help of describe()
 
  
+fireEvent : define state and use with on change event, Import component in test file.
