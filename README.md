@@ -79,3 +79,11 @@ const MyComponent = () => {
 }
 
 export default MyComponent;
+
+```
+
+File and folder naming convention
+> .file_name.test.js
+> .file_name.spec.js / ts
+> .file_name.spec.jsx / tsx
+> __tests__

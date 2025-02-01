@@ -70,6 +70,14 @@ test("click event test case",()=>{
     render(<MyJestApp/>);
     const btn = screen.getByRole("button");
     fireEvent.click(btn);
-    expect(screen.getByText("Update Data")).toBeInTheDocument();
+    expect(screen.getByText("My data is updated")).toBeInTheDocument();
 
+})
+
+
+it("test button",()=>{
+    render(<MyJestApp/>);
+    const buttonEvent = screen.getByRole("button",{name:'Update Data'});
+    fireEvent.click(buttonEvent);
+    expect(screen.getByText("Update Data")).toBeInTheDocument();
 })
