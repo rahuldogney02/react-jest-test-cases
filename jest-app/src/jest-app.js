@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const MyJestApp = () =>{
     const [data , setName] = useState("");
+    const [btn, setBtn] = useState("");
 
     function printData(e){
         e.preventDefault();
@@ -25,6 +26,11 @@ const MyJestApp = () =>{
                 <input type='text' name="firstname" placeholder="Enter first name" value={data} onChange={printData}  />
             </div>
         </div>
+        <div>
+            <button onClick={()=>setBtn("My data is updated")}>Update Data</button>
+            <h1>{btn}</h1>
+        </div>
+
         </>
     )
 }

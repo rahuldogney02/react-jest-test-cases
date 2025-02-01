@@ -65,3 +65,11 @@ test('input field fireEvent',()=>{
     fireEvent.change(inputName,{target:{value:'113'}});
     expect(inputName.value).toBe("113Test")
 })
+
+test("click event test case",()=>{
+    render(<MyJestApp/>);
+    const btn = screen.getByRole("button");
+    fireEvent.click(btn);
+    expect(screen.getByText("Update Data")).toBeInTheDocument();
+
+})
