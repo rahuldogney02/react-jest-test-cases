@@ -1,4 +1,5 @@
 "# react-jest-test-cases" 
+[eslint rules](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/await-async-events.md)
 
 how to run specific test files.
 
@@ -99,3 +100,12 @@ afterAll > once all test cases is ran 1 time
 afterEach > running 10 time after runing test cases.
 
 why we use : Some of the case need to clean DB, env setup, or creating constant.
+
+
+Snapshot testing
+snapshot of code and keeping in another file
+benefit of this is when your Application is almost going to or code done final Live.
+Avoiding end-movment chances of bug
+› Press u to update failing snapshots.
+
+

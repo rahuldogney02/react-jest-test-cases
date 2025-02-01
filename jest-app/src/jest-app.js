@@ -35,7 +35,7 @@ const MyJestApp = () =>{
             <button onClick={toggle}>Update Data</button>
             <h1>{btn}</h1>
         </div>
-
+        <h2>Snapshot testing</h2>
         </>
     )
 }

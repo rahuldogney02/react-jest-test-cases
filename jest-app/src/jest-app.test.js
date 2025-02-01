@@ -1,4 +1,4 @@
-import {fireEvent, render , screen} from '@testing-library/react';
+import {fireEvent ,render, screen} from '@testing-library/react';
 import MyJestApp from './jest-app';
 
 const titleValue= 'freepik images';
@@ -75,8 +75,10 @@ test("click event test case",()=>{
 })
 
 
-it("test button",()=>{
-    render(<MyJestApp/>);
+it("test button snapshot",()=>{
+
+    const view = render(<MyJestApp/>);
+    expect(view).toMatchSnapshot();
     const buttonEvent = screen.getByRole("button",{name:'Update Data'});
     fireEvent.click(buttonEvent);
     expect(screen.getByText("Update Data")).toBeInTheDocument();
