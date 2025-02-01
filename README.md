@@ -47,3 +47,35 @@ Pattern Mode Usage
 
  
 fireEvent : define state and use with on change event, Import component in test file.
+
+
+## Code Example
+
+Here is a simple example of how to create a store using Zustand:
+
+```javascript
+import React from 'react';
+import create from 'zustand';
+
+// Create a store
+const useStore = create((set) => ({
+    prevData: "",
+    color: "black",
+    toggle: () => set((state) => ({
+        prevData: state.prevData ? '' : "My data is updated",
+        color: state.color === "black" ? "red" : "black"
+    }))
+}));
+
+const MyComponent = () => {
+    const { prevData, color, toggle } = useStore();
+
+    return (
+        <div>
+            <button onClick={toggle}>Update Data</button>
+            <h1 style={{ color: color }}>{prevData}</h1>
+        </div>
+    );
+}
+
+export default MyComponent;

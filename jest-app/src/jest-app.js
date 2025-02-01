@@ -13,6 +13,11 @@ const MyJestApp = () =>{
 
     }
 
+    function toggle(){
+        setBtn(btn ? '' : "My data is updated"); 
+              
+    }
+
     return(
         <>
         <div style={{border: '2px dashed black' , padding:'10px', background:'black' , color:'red',display:'flex'} }>
@@ -27,7 +32,7 @@ const MyJestApp = () =>{
             </div>
         </div>
         <div>
-            <button onClick={()=>setBtn("My data is updated")}>Update Data</button>
+            <button onClick={toggle}>Update Data</button>
             <h1>{btn}</h1>
         </div>
 
