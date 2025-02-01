@@ -41,3 +41,8 @@ Pattern Mode Usage
 
  Pattern matches 1 test from cached test suites
  › Testing of Input box
+
+
+ Describe : When we have lot's of test cases i.e shorting, api call, event etc. Identification is simple by using describe() , some time i want to test/skip  api related test cases by using grouping with the help of describe()
+
+ 
