@@ -108,4 +108,17 @@ benefit of this is when your Application is almost going to or code done final L
 Avoiding end-movment chances of bug
 › Press u to update failing snapshots.
 
+### what we should test
+> Test component rendering.
+> UI elements that we write. inputbox lable must be there, button, etc
+> Functions which we write. some validation fun().
+> API tesing. Depends if client recommended,mock or normal test.
+> Event testing : very important testing like button click , keydown ,mouse hover.
+> Props and states : mainly focused on ui elements, core fun justan, enzime, etc.
+> Ui condition or state testing : suppose button is diff in case of logged in User and guest user.
+
+> Avoid :
+    > External UI library like : tellwind, material ui, etc.
+    > No need to test default js Fun() like toString,subString etc. Focus on custom components
+    > Function calling in side multiple function calling like lader nested inside-inside. Make mock function
 
