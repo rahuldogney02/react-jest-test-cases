@@ -87,3 +87,15 @@ File and folder naming convention
 > .file_name.spec.js / ts
 > .file_name.spec.jsx / tsx
 > __tests__
+
+Before and After hooks
+
+before is running just before the running of jest test cases 
+beforeAll > means if i run all 10 test cases it's runing only 1 time.
+beforeEach > if you have 10 test cases its running 10 time.
+
+after 
+afterAll > once all test cases is ran 1 time
+afterEach > running 10 time after runing test cases.
+
+why we use : Some of the case need to clean DB, env setup, or creating constant.
