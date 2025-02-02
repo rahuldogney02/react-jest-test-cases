@@ -122,3 +122,8 @@ Avoiding end-movment chances of bug
     > No need to test default js Fun() like toString,subString etc. Focus on custom components
     > Function calling in side multiple function calling like lader nested inside-inside. Make mock function
 
+
+#### class component  
+const userClassInstance = new UserClass();
+expect(userClassInstance.getUserList()).toBe("User list");
+> It's giving instance
