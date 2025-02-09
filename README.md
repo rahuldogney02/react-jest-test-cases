@@ -127,3 +127,12 @@ Avoiding end-movment chances of bug
 const userClassInstance = new UserClass();
 expect(userClassInstance.getUserList()).toBe("User list");
 -It's giving instance
+
+### functional component method testig
+
+1. Possible case for method testing.
+ > Majorly two method 1. Event fire : button event onClick, onChange, upKeyDown, etc.
+ > If in function is not running behalf of any click or change event not test directly. Test directly
+2. Define the button, click events and method.
+3. Test method with event.
+4. Test method wihout event.

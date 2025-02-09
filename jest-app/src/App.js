@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import MyJestApp from "./jest-app";
+import UserClass from './UsersClass';
+import UserFunction from './UserFunctional';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           Learn React Jest Test Cases
         </a>
       </header>
+      <UserClass/>
+      <UserFunction/>
     </div>
   );
 }
