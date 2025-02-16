@@ -136,3 +136,38 @@ expect(userClassInstance.getUserList()).toBe("User list");
 2. Define the button, click events and method.
 3. Test method with event.
 4. Test method wihout event.
+
+
+### Queries in RTL (React Testing Library) 
+Whenever we are testing Using RTL we can find the UI elements.
+ 1. Why need to find ? : there are N number of elements in site like button,link, checkbox etc. writing for perticular test case
+ 2. Steps in testing UI
+   > Render Component 
+    ```javascript 
+        render(<App/>);
+    ```
+   > Find element and action
+    ```javascript 
+            const btn = screen.getByTestId("loginBtn");
+            //action {Its like an optional}
+            fireElement.click(btn)
+    ```
+
+    > Assertions
+    ```javascript
+        excpeexpect(screen.getByText("hello")).toBeInTheDocument();
+    ```
+
+ 3. Type of RTL Queries
+   > Finding Single Element
+    * getBy
+    * queryBy
+    * findBy
+
+   > Finding Multiple elements
+    * getAllBy
+    * queryAllBy
+    * findAllBy
+    
+
+   
